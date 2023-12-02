@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "162471765490",
+    "firebase_url": "https://nestrack-iot-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "nestrack-iot",
+    "storage_bucket": "nestrack-iot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162471765490:android:7517f1f5e75952450cf76b",
+        "android_client_info": {
+          "package_name": "com.example.projetiot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkj3Zy_Ga_gzAWt2hlXJ4yFbFY8FVvs4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

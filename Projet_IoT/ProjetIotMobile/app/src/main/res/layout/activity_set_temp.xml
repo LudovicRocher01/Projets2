@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38b6ff">
+
+    <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gagalin"
+        android:text="Nestrack"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/mainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round_button"
+        android:text="Accueil"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainButton"
+        android:layout_alignStart="@+id/mainButton"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_button"
+        android:text="Retour"
+        android:textColor="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="258dp"
+        android:layout_height="247dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/enterPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Veuillez entrer une Température minimale pour le nid : "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_centerInParent="true"
+        android:gravity="center" />
+
+
+
+    <!-- Tmax
+    <EditText
+        android:id="@+id/tmaxInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tmax ="
+        android:layout_below="@+id/tminInput"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#000000" /> -->
+
+    <EditText
+        android:id="@+id/tminInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterPrompt"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Tmin ="
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/validateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/round_button"
+        android:text="Valider"
+        android:textColor="#FFFFFF" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

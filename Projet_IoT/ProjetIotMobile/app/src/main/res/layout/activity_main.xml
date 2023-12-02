@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38b6ff"
+    android:padding="16dp"
+    tools:context=".views.MainActivity">
+
+<TextView
+    android:id="@+id/appNameTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Nestrack"
+    android:textSize="36sp"
+    android:fontFamily="@font/gagalin"
+    android:textColor="#FFFFFF"
+    android:layout_marginTop="16dp"
+    android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="387dp"
+        android:layout_height="577dp"
+        android:layout_below="@+id/appNameTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/logo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/brown"
+        app:cornerRadius="16dp"
+        android:text="Connexion"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+    </RelativeLayout>

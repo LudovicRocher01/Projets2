@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38b6ff"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nestrack"
+        android:textSize="36sp"
+        android:fontFamily="@font/gagalin"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="387dp"
+        android:layout_height="577dp"
+        android:src="@drawable/loading_bird"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

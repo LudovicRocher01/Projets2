@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/VisuDonnées"
+        android:title="Visualiser les données"
+        android:icon="@drawable/logo_data" />
+    <item
+        android:id="@+id/AccesCamera"
+        android:title="Accès Caméra"
+        android:icon="@drawable/logo_camera" />
+    <item
+        android:id="@+id/GererTemp"
+        android:title="Gérer Température"
+        android:icon="@drawable/temp" />
+</menu>

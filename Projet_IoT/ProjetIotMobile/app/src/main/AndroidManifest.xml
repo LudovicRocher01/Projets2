@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.ProjetIot"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".views.MainActivity">
+        </activity>
+
+        <activity
+            android:name=".views.LoginActivity">
+        </activity>
+
+        <activity
+            android:name=".views.TempActivity">
+        </activity>
+
+        <activity
+            android:name=".views.SetTempActivity">
+        </activity>
+
+        <activity
+            android:name=".views.SeeDataActivity">
+        </activity>
+
+        <activity
+            android:name=".views.SeeDataActivity2">
+        </activity>
+
+        <activity
+            android:name=".views.SeeCameraActivity">
+        </activity>
+
+        <activity
+            android:name=".splashactivities.SplashActivity"
+            android:label="Splash Screen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".splashactivities.SplashActivityLogin"
+            android:label="Splash Screen Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".splashactivities.SplashActivitySetTemp"
+            android:label="Splash Screen Set Temp"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".views.MainAppActivity">
+        </activity>
+
+
+
+    </application>
+
+</manifest>
