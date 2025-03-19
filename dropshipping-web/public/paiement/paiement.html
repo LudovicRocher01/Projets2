@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSTEOZEN - Paiement</title>
+    <link rel="stylesheet" href="paiement.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AYf8d2tAP5aRlQfOcLYq3cRrUc1YTKgTFrlkXFxC-bIJeizb1RcjpONNTF8dnAvI8mvd32aLjaxSZKem&currency=EUR"></script>
+</head>
+<body>
+
+<div id="loading-overlay">
+    <div class="loading-spinner"></div>
+    <p>Traitement en cours... Veuillez patienter</p>
+</div>
+
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">🌿 Osteozen</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="heading">
+            <ion-icon name="card-outline"></ion-icon> Paiement sécurisé
+        </h1>
+
+        <div class="item-flex">
+            <section class="checkout">
+                <h2 class="section-heading">Confirmer et payer</h2>
+                <div id="paypal-button-container"></div>
+            </section>
+
+            <section class="cart">
+                <div class="cart-item-box" id="paiement-container">
+                    <h2 class="section-heading">Détails de votre commande</h2>
+                    <p>Chargement...</p>
+                </div>
+                <div class="wrapper">
+                    <div class="amount">
+                        <div class="subtotal">
+                            <span>Sous-total</span> <span>€ <span id="subtotal">0.00</span></span>
+                        </div>
+                        <div class="shipping">
+                            <span>Livraison</span> <span>€ <span id="shipping">0.00</span></span>
+                        </div>
+                        <div class="total">
+                            <span>Total</span> <span>€ <span id="total">0.00</span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="paiement.js"></script>
+</body>
+</html>

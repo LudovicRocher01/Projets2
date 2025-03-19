@@ -1,0 +1,10 @@
+node_modules/
+.env
+uploads/
+*.log
+dist/
+tmp/
+server.key
+server.crt
+access.log
+error.log
