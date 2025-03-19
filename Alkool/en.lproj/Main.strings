@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2sa-6T-3cL"; */
+"2sa-6T-3cL.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Jouer"; ObjectID = "Fer-5M-wX4"; */
+"Fer-5M-wX4.configuration.title" = "Jouer";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Fer-5M-wX4"; */
+"Fer-5M-wX4.normalTitle" = "Button";
+
+/* Class = "UITextField"; text = "Entrez un nom..."; ObjectID = "Uud-8W-du0"; */
+"Uud-8W-du0.text" = "Entrez un nom...";
+
+/* Class = "UILabel"; text = "Alkool"; ObjectID = "f1D-68-nqe"; */
+"f1D-68-nqe.text" = "Alkool";
+
+/* Class = "UILabel"; text = "Ajoutez un joueur :"; ObjectID = "mFT-FS-RdW"; */
+"mFT-FS-RdW.text" = "Ajoutez un joueur :";

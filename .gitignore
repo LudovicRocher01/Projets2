@@ -1,0 +1,10 @@
+# Exclure GameData
+GameData.swift
+GameData/
+
+# Exclure les fichiers générés par Xcode
+.DS_Store
+*.xcworkspace
+Pods/
+DerivedData/
+xcuserdata/
