@@ -367,36 +367,21 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Veuillez choisir un nombre de questions et les thèmes avec lesquelles vous voulez jouer :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8p-nd-4LK">
-                                <rect key="frame" x="0.0" y="207" width="393" height="134"/>
+                                <rect key="frame" x="0.0" y="207" width="393" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.92156862750000001" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fwy-7w-FwN">
-                                <rect key="frame" x="33" y="335" width="344" height="219"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThemeCell" id="ZQG-cl-4qa">
-                                        <rect key="frame" x="0.0" y="55.333332061767578" width="344" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZQG-cl-4qa" id="NhX-do-OA4">
-                                            <rect key="frame" x="0.0" y="0.0" width="344" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1cD-pD-gkP"/>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.027450980390000001" blue="0.84313725490000002" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="A5p-Fj-Znv"/>
                     <connections>
+                        <outlet property="chooseLabel" destination="D8p-nd-4LK" id="Bvt-Ka-FLi"/>
                         <outlet property="questionsLabel" destination="LP8-E9-O5R" id="hqW-sZ-WrW"/>
                         <outlet property="questionsSlider" destination="RKZ-n3-jvA" id="Nxr-yl-kef"/>
-                        <outlet property="themesTableView" destination="fwy-7w-FwN" id="V0t-Jz-PbD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jye-30-Apf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
