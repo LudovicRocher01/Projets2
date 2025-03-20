@@ -7,18 +7,31 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var players: [Player] = []
-    var selectedThemes: [String] = []
+    let themes = [
+        "Catégorie",
+        "Je n'ai jamais",
+        "Culture G",
+        "Vrai ou Faux",
+        "Qui pourrait",
+        "Jeux",
+        "Débats",
+        "Autres"
+    ]
     
     @IBOutlet weak var questionsSlider: UISlider!
     @IBOutlet weak var questionsLabel: UILabel!
+    @IBOutlet weak var themesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         updateQuestionsLabel()
+        themesTableView.delegate = self
+        themesTableView.dataSource = self
+        themesTableView.allowsMultipleSelection = true
     }
     
     
@@ -29,9 +42,32 @@ class SettingsViewController: UIViewController {
                 
                 let questionsCount = Int(questionsSlider.value)
                 destinationVC.totalQuestions = questionsCount
+                destinationVC.selectedThemes = getSelectedThemes()
             }
         }
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return themes.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ThemeCell", for: indexPath)
+        cell.textLabel?.text = themes[indexPath.row]
+        return cell
+    }
+
+    func getSelectedThemes() -> [String] {
+        guard let selectedIndexPaths = themesTableView.indexPathsForSelectedRows else {
+            return []
+        }
+        return selectedIndexPaths.map { themes[$0.row] }
+    }
+
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let sliderValue = round(sender.value / 5) * 5

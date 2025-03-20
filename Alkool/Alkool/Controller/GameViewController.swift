@@ -19,6 +19,9 @@ class GameViewController: UIViewController {
     
     var players: [Player] = []
     var totalQuestions: Int = 25
+    var selectedThemes: [String] = []
+    var availableThemeTypes = [Int]()
+
     private var currentQuestionIndex: Int = 1
     private var currentAnswer: String = ""
 
@@ -27,9 +30,42 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        availableThemeTypes = getAvailableThemeTypes()
         updateProgressBar()
         generateNewChallenge()
     }
+    
+    func getAvailableThemeTypes() -> [Int] {
+        var themeList = [Int]()
+        
+        if selectedThemes.contains("Catégorie") {
+            themeList += [0, 1, 2, 21, 22]
+        }
+        if selectedThemes.contains("Autres") {
+            themeList += [12,13,14,15,18,29]
+        }
+        if selectedThemes.contains("Je n'ai jamais") {
+            themeList += [6,7,8]
+        }
+        if selectedThemes.contains("Qui pourrait") {
+            themeList += [9,10,11]
+        }
+        if selectedThemes.contains("Jeux") {
+            themeList += [3,4,5,16,17]
+        }
+        if selectedThemes.contains("Débats") {
+            themeList += [19,20]
+        }
+        if selectedThemes.contains("Culture G") {
+            themeList += [23,24,25]
+        }
+        if selectedThemes.contains("Vrai ou Faux") {
+            themeList += [26,27,28]
+        }
+
+        return themeList
+    }
+
     
     func goToMainMenu() {
         if let navigationController = self.navigationController {
@@ -73,8 +109,6 @@ class GameViewController: UIViewController {
         infoButton.isHidden = false
     }
     
-    
-    
     @IBAction func nextChallenge(_ sender: UIButton) {
         checkEndGame()
         if currentQuestionIndex < totalQuestions {
@@ -85,8 +119,15 @@ class GameViewController: UIViewController {
     }
     
     func generateNewChallenge() {
+        guard !availableThemeTypes.isEmpty else {
+                messageLabel.text = "Aucun thème sélectionné"
+                themeLabel.text = ""
+                sipLabel.text = ""
+                return
+            }
+        
         let randomPlayer = players.randomElement()!
-        let themeType = Int.random(in: 0...29)
+        let themeType = availableThemeTypes.randomElement()!
         
         let message: String
         var secondPlayer: Player? = nil
@@ -187,7 +228,7 @@ class GameViewController: UIViewController {
             sipLabel.text = "🥃🥃"
             message = "\(randomPlayer.name), concernant \(secondPlayer?.name ?? "un autre joueur") : \(randomConfidence)"
         default:
-            message = "Erreur inattendue. Impossible de tirer un thème."
+            message = " \(availableThemeTypes)"
         }
         
         let attributedMessage = NSMutableAttributedString(string: message)
